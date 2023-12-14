@@ -174,6 +174,7 @@
     <ClInclude Include="SourceCode\all.h" />
     <ClInclude Include="SourceCode\common.h" />
     <ClInclude Include="SourceCode\game.h" />
+    <ClInclude Include="SourceCode\light.h" />
     <ClInclude Include="SourceCode\user.h" />
     <ClInclude Include="SourceCode\scene.h" />
     <ClInclude Include="SourceCode\title.h" />
@@ -283,6 +284,7 @@
     <ClCompile Include="GameLib\view_settings.cpp" />
     <ClCompile Include="GameLib\wnd_proc.cpp" />
     <ClCompile Include="SourceCode\game.cpp" />
+    <ClCompile Include="SourceCode\light.cpp" />
     <ClCompile Include="SourceCode\main.cpp" />
     <ClCompile Include="SourceCode\scene.cpp" />
     <ClCompile Include="SourceCode\title.cpp" />

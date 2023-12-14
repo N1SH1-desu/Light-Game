@@ -18,49 +18,49 @@
 //--------------------------------------------------------------
 //  =
 //--------------------------------------------------------------
-VECTOR2 &VECTOR2::operator=(const VECTOR2& v)
+VECTOR2& VECTOR2::operator=(const VECTOR2& v)
 {
-    x = v.x; y = v.y; return *this;
+	x = v.x; y = v.y; return *this;
 }
 
 //--------------------------------------------------------------
 //  +=
 //--------------------------------------------------------------
-VECTOR2 &VECTOR2::operator+=(const VECTOR2 &v)
+VECTOR2& VECTOR2::operator+=(const VECTOR2& v)
 {
-    x += v.x;
-    y += v.y;
-    return *this;
+	x += v.x;
+	y += v.y;
+	return *this;
 }
 
 //--------------------------------------------------------------
 //  -=
 //--------------------------------------------------------------
-VECTOR2 &VECTOR2::operator-=(const VECTOR2 &v)
+VECTOR2& VECTOR2::operator-=(const VECTOR2& v)
 {
-    x -= v.x;
-    y -= v.y;
-    return *this;
+	x -= v.x;
+	y -= v.y;
+	return *this;
 }
 
 //--------------------------------------------------------------
 //  *=
 //--------------------------------------------------------------
-VECTOR2 &VECTOR2::operator*=(float f)
+VECTOR2& VECTOR2::operator*=(float f)
 {
-    x *= f;
-    y *= f;
-    return *this;
+	x *= f;
+	y *= f;
+	return *this;
 }
 
 //--------------------------------------------------------------
 //  /=
 //--------------------------------------------------------------
-VECTOR2 &VECTOR2::operator/=(float f)
+VECTOR2& VECTOR2::operator/=(float f)
 {
-    x /= f;
-    y /= f;
-    return *this;
+	x /= f;
+	y /= f;
+	return *this;
 }
 
 //--------------------------------------------------------------
@@ -68,7 +68,7 @@ VECTOR2 &VECTOR2::operator/=(float f)
 //--------------------------------------------------------------
 VECTOR2 VECTOR2::operator+() const
 {
-    return VECTOR2(x, y);
+	return VECTOR2(x, y);
 }
 
 //--------------------------------------------------------------
@@ -76,23 +76,23 @@ VECTOR2 VECTOR2::operator+() const
 //--------------------------------------------------------------
 VECTOR2 VECTOR2::operator-() const
 {
-    return VECTOR2(-x, -y);
+	return VECTOR2(-x, -y);
 }
 
 //--------------------------------------------------------------
 //  +（和）
 //--------------------------------------------------------------
-VECTOR2 VECTOR2::operator+(const VECTOR2 &v) const
+VECTOR2 VECTOR2::operator+(const VECTOR2& v) const
 {
-    return VECTOR2(x + v.x, y + v.y);
+	return VECTOR2(x + v.x, y + v.y);
 }
 
 //--------------------------------------------------------------
 //  -（差）
 //--------------------------------------------------------------
-VECTOR2 VECTOR2::operator-(const VECTOR2 &v) const
+VECTOR2 VECTOR2::operator-(const VECTOR2& v) const
 {
-    return VECTOR2(x - v.x, y - v.y);
+	return VECTOR2(x - v.x, y - v.y);
 }
 
 //--------------------------------------------------------------
@@ -100,15 +100,15 @@ VECTOR2 VECTOR2::operator-(const VECTOR2 &v) const
 //--------------------------------------------------------------
 VECTOR2 VECTOR2::operator*(float f) const
 {
-    return VECTOR2(x * f, y * f);
+	return VECTOR2(x * f, y * f);
 }
 
 //--------------------------------------------------------------
 //  *
 //--------------------------------------------------------------
-VECTOR2 operator*(float f, const VECTOR2 &v)
+VECTOR2 operator*(float f, const VECTOR2& v)
 {
-    return VECTOR2(v.x * f, v.y * f);
+	return VECTOR2(v.x * f, v.y * f);
 }
 
 //--------------------------------------------------------------
@@ -116,7 +116,7 @@ VECTOR2 operator*(float f, const VECTOR2 &v)
 //--------------------------------------------------------------
 VECTOR2 VECTOR2::operator/(float f) const
 {
-    return VECTOR2(x / f, y / f);
+	return VECTOR2(x / f, y / f);
 }
 
 //--------------------------------------------------------------
@@ -124,7 +124,7 @@ VECTOR2 VECTOR2::operator/(float f) const
 //--------------------------------------------------------------
 bool VECTOR2::operator == (const VECTOR2& v) const
 {
-    return (x == v.x) && (y == v.y);
+	return (x == v.x) && (y == v.y);
 }
 
 //--------------------------------------------------------------
@@ -132,7 +132,7 @@ bool VECTOR2::operator == (const VECTOR2& v) const
 //--------------------------------------------------------------
 bool VECTOR2::operator != (const VECTOR2& v) const
 {
-    return (x != v.x) || (y != v.y);
+	return (x != v.x) || (y != v.y);
 }
 
 //--------------------------------------------------------------
@@ -140,7 +140,7 @@ bool VECTOR2::operator != (const VECTOR2& v) const
 //--------------------------------------------------------------
 float vec2LengthSq(const VECTOR2& v)
 {
-    return v.x * v.x + v.y * v.y;
+	return v.x * v.x + v.y * v.y;
 }
 
 //--------------------------------------------------------------
@@ -148,7 +148,7 @@ float vec2LengthSq(const VECTOR2& v)
 //--------------------------------------------------------------
 float vec2Length(const VECTOR2& v)
 {
-    return sqrtf(vec2LengthSq(v));
+	return sqrtf(vec2LengthSq(v));
 }
 
 //--------------------------------------------------------------
@@ -156,16 +156,16 @@ float vec2Length(const VECTOR2& v)
 //--------------------------------------------------------------
 VECTOR2* vec2Normalize(const VECTOR2& v, VECTOR2* out)
 {
-    *out = v;
-    float d = vec2Length(v);
-    *out /= d;
-    return out;
+	*out = v;
+	float d = vec2Length(v);
+	*out /= d;
+	return out;
 }
 
 VECTOR2 vec2Normalize(const VECTOR2& v)
 {
-    float d = vec2Length(v);
-    return v / d;
+	float d = vec2Length(v);
+	return v / d;
 }
 
 //******************************************************************************
@@ -177,56 +177,56 @@ VECTOR2 vec2Normalize(const VECTOR2& v)
 //--------------------------------------------------------------
 //  =
 //--------------------------------------------------------------
-VECTOR3 &VECTOR3::operator=(const VECTOR3& v)
+VECTOR3& VECTOR3::operator=(const VECTOR3& v)
 {
-    x = v.x;
-    y = v.y;
-    z = v.z;
-    return *this;
+	x = v.x;
+	y = v.y;
+	z = v.z;
+	return *this;
 }
 
 //--------------------------------------------------------------
 //  +=
 //--------------------------------------------------------------
-VECTOR3 &VECTOR3::operator+=(const VECTOR3 &v)
+VECTOR3& VECTOR3::operator+=(const VECTOR3& v)
 {
-    x += v.x;
-    y += v.y;
-    z += v.z;
-    return *this;
+	x += v.x;
+	y += v.y;
+	z += v.z;
+	return *this;
 }
 
 //--------------------------------------------------------------
 //  -=
 //--------------------------------------------------------------
-VECTOR3 &VECTOR3::operator-=(const VECTOR3 &v)
+VECTOR3& VECTOR3::operator-=(const VECTOR3& v)
 {
-    x -= v.x;
-    y -= v.y;
-    z -= v.z;
-    return *this;
+	x -= v.x;
+	y -= v.y;
+	z -= v.z;
+	return *this;
 }
 
 //--------------------------------------------------------------
 //  *=
 //--------------------------------------------------------------
-VECTOR3 &VECTOR3::operator*=(float f)
+VECTOR3& VECTOR3::operator*=(float f)
 {
-    x *= f;
-    y *= f;
-    z *= f;
-    return *this;
+	x *= f;
+	y *= f;
+	z *= f;
+	return *this;
 }
 
 //--------------------------------------------------------------
 //  /=
 //--------------------------------------------------------------
-VECTOR3 &VECTOR3::operator/=(float f)
+VECTOR3& VECTOR3::operator/=(float f)
 {
-    x /= f;
-    y /= f;
-    z /= f;
-    return *this;
+	x /= f;
+	y /= f;
+	z /= f;
+	return *this;
 }
 
 //--------------------------------------------------------------
@@ -234,7 +234,7 @@ VECTOR3 &VECTOR3::operator/=(float f)
 //--------------------------------------------------------------
 VECTOR3 VECTOR3::operator+() const
 {
-    return VECTOR3(x, y, z);
+	return VECTOR3(x, y, z);
 }
 
 //--------------------------------------------------------------
@@ -242,23 +242,23 @@ VECTOR3 VECTOR3::operator+() const
 //--------------------------------------------------------------
 VECTOR3 VECTOR3::operator-() const
 {
-    return VECTOR3(-x, -y, -z);
+	return VECTOR3(-x, -y, -z);
 }
 
 //--------------------------------------------------------------
 //  +（和）
 //--------------------------------------------------------------
-VECTOR3 VECTOR3::operator+(const VECTOR3 &v) const
+VECTOR3 VECTOR3::operator+(const VECTOR3& v) const
 {
-    return VECTOR3(x + v.x, y + v.y, z + v.z);
+	return VECTOR3(x + v.x, y + v.y, z + v.z);
 }
 
 //--------------------------------------------------------------
 //  -（差）
 //--------------------------------------------------------------
-VECTOR3 VECTOR3::operator-(const VECTOR3 &v) const
+VECTOR3 VECTOR3::operator-(const VECTOR3& v) const
 {
-    return VECTOR3(x - v.x, y - v.y, z - v.z);
+	return VECTOR3(x - v.x, y - v.y, z - v.z);
 }
 
 //--------------------------------------------------------------
@@ -266,15 +266,15 @@ VECTOR3 VECTOR3::operator-(const VECTOR3 &v) const
 //--------------------------------------------------------------
 VECTOR3 VECTOR3::operator*(float f) const
 {
-    return VECTOR3(x * f, y * f, z * f);
+	return VECTOR3(x * f, y * f, z * f);
 }
 
 //--------------------------------------------------------------
 //  *
 //--------------------------------------------------------------
-VECTOR3 operator*(float f, const VECTOR3 &v)
+VECTOR3 operator*(float f, const VECTOR3& v)
 {
-    return VECTOR3(v.x * f, v.y * f, v.z * f);
+	return VECTOR3(v.x * f, v.y * f, v.z * f);
 }
 
 //--------------------------------------------------------------
@@ -282,7 +282,7 @@ VECTOR3 operator*(float f, const VECTOR3 &v)
 //--------------------------------------------------------------
 VECTOR3 VECTOR3::operator/(float f) const
 {
-    return VECTOR3(x / f, y / f, z / f);
+	return VECTOR3(x / f, y / f, z / f);
 }
 
 //--------------------------------------------------------------
@@ -290,7 +290,7 @@ VECTOR3 VECTOR3::operator/(float f) const
 //--------------------------------------------------------------
 bool VECTOR3::operator == (const VECTOR3& v) const
 {
-    return (x == v.x) && (y == v.y) && (z == v.z);
+	return (x == v.x) && (y == v.y) && (z == v.z);
 }
 
 //--------------------------------------------------------------
@@ -298,25 +298,25 @@ bool VECTOR3::operator == (const VECTOR3& v) const
 //--------------------------------------------------------------
 bool VECTOR3::operator != (const VECTOR3& v) const
 {
-    return (x != v.x) || (y != v.y) || (z != v.z);
+	return (x != v.x) || (y != v.y) || (z != v.z);
 }
 
 VECTOR3::VECTOR3(const VECTOR2& v)
 {
-    x = v.x;
-    y = v.y;
-    z = 0;
+	x = v.x;
+	y = v.y;
+	z = 0;
 }
 
 //--------------------------------------------------------------
 //  VECTOR2をVECTOR3に代入（zは無視）
 //--------------------------------------------------------------
-VECTOR3 &VECTOR3::operator=(const VECTOR2& v)
+VECTOR3& VECTOR3::operator=(const VECTOR2& v)
 {
-    x = v.x;
-    y = v.y;
-    z = 0;
-    return *this;
+	x = v.x;
+	y = v.y;
+	z = 0;
+	return *this;
 }
 
 //******************************************************************************

@@ -8,6 +8,9 @@
 //
 //******************************************************************************
 
+//前方宣言
+class light;
+
 //==============================================================================
 //
 //      Gameクラス
@@ -17,19 +20,25 @@
 class Game : public Scene
 {
 public:
-    static Game* instance() { return &instance_; }
+	static Game* instance() { return &instance_; }
 
-    Game();
+	Game();
 
-    void init();
-    void deinit();
-    void update();
-    void draw();
+	void init();
+	void deinit();
+	void update();
+	void draw();
 
 private:
-    bool                isPaused;
+	bool                isPaused;
 
-    static Game instance_;
+	//ライト
+	light* light_;
+
+	//バックグラウンド
+	GameLib::Sprite* background_;
+
+	static Game instance_;
 };
 
 //******************************************************************************
