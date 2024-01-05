@@ -27,13 +27,15 @@ void light::init()
 void light::update()
 {
 	debug::setString("x_velo : %f", velocity_.x);
+	debug::setString("x : %f", transform_.x);
+	debug::setString("y : %f", transform_.y);
 	transform_.x += velocity_.x;
 	transform_.y += velocity_.y;
 }
 
 void light::render() const
 {
-	GameLib::primitive::circle(transform_, 50, { 1,1 }, 0, { 0,1,0,1 });
+	GameLib::primitive::rect(transform_, { 50, 50 }, { 25, 25 }, 0, { 0,0,1,1 });
 }
 
 bool light::isHit()

@@ -101,6 +101,12 @@
     <ClInclude Include="SourceCode\light.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="SourceCode\enemy.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCode\player.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="GameLib\primitive.hlsli">
@@ -204,6 +210,12 @@
       <Filter>GameLib\Sources</Filter>
     </ClCompile>
     <ClCompile Include="SourceCode\light.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCode\enemy.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCode\player.cpp">
       <Filter>Sources</Filter>
     </ClCompile>
   </ItemGroup>

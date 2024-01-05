@@ -26,4 +26,6 @@
 #include "title.h"
 
 #include "light.h"
+#include "enemy.h"
+#include "player.h"
 //******************************************************************************
